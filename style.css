@@ -2758,8 +2758,13 @@ a {
     flex: 0 0 auto;
     background-color: #ffb400;
     border-radius: 5px;
+   /* box-shadow: none; /* Remove shadow effect */
+    border: none; /* Ensure no border */
   }
-  
+  .main .add-skill:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: none; /* Ensure no shadow on focus */
+  }
   .main .add-skill-2 {
     position: relative;
     width: fit-content;
@@ -2811,7 +2816,59 @@ a {
     background-size: cover;
     background-position: 50% 50%;
   }
+
+  .main .logo-3 {
+    position: relative;
+    width: 970px;
+    height: 144px;
+  }
   
+  .main .frame-4 {
+    position: absolute;
+    width: 140px;
+    height: 144px;
+    top: 0;
+    left: 0;
+    background-image: url(https://c.animaapp.com/bKBXDrmE/img/frame-2@2x.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  
+  .main .frame-5 {
+    position: absolute;
+    width: 140px;
+    height: 144px;
+    top: 0;
+    left: 284px;
+    background-image: url(https://c.animaapp.com/bKBXDrmE/img/frame-3@2x.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  
+  .main .frame-6 {
+    position: absolute;
+    width: 140px;
+    height: 144px;
+    top: 0;
+    left: 561px;
+    background-image: url(https://c.animaapp.com/bKBXDrmE/img/frame-4@2x.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  
+  .main .frame-7 {
+    position: absolute;
+    width: 140px;
+    height: 144px;
+    top: 0;
+    left: 830px;
+    background-image: url(https://c.animaapp.com/bKBXDrmE/img/frame-5@2x.png);
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+ 
+
+
   .main .frame-2 {
     display: flex;
     align-items: flex-start;
@@ -3018,7 +3075,7 @@ a {
     height: 25px;
   }
   
-  .main .frame-4 {
+  .main .frame-17 {
     display: inline-flex;
     align-items: center;
     gap: 10px;
