@@ -85,12 +85,14 @@ a {
     align-items: center;
     justify-content: space-between;
     padding: 38px 96px;
-    position: absolute;
+    z-index: 1000; /* Ensure it stays above other content */
+    position: sticky; /* Make the navbar sticky */
     top: 0;
     left: 0;
     background-color: #ffffff;
     box-shadow: 4px 0px 10px #2f7af91a;
 }
+
   
 .page .logo {
     position: relative;
@@ -135,6 +137,7 @@ a {
     margin-right: -15.5px;
     border-radius: 10px;
     transform: rotate(-90deg);
+    pointer-events: auto; 
 }
   
 .page .text-wrapper {
@@ -833,14 +836,14 @@ a {
     left: -2305px;
   }
   
-  .page .profile {
+ /* .page .profile {
     position: absolute;
     width: 88px;
     height: 81px;
     top: -654px;
     left: -2305px;
     object-fit: cover;
-  }
+  }*/
   
   .page .overlap-wrapper {
     position: relative;
@@ -1173,56 +1176,6 @@ a {
     position: relative;
     width: 90px;
     height: 10.07px;
-  }
-  
-  .page .ellipse-5 {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    top: 0;
-    left: 20px;
-    background-color: #ffde8d;
-    border-radius: 5px/5.04px;
-  }
-  
-  .page .ellipse-6 {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    top: 0;
-    left: 0;
-    background-color: #ffde8d;
-    border-radius: 5px/5.04px;
-  }
-  
-  .page .ellipse-7 {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    top: 0;
-    left: 40px;
-    background-color: var(--yellow);
-    border-radius: 5px/5.04px;
-  }
-  
-  .page .ellipse-8 {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    top: 0;
-    left: 60px;
-    background-color: #ffdd8d;
-    border-radius: 5px/5.04px;
-  }
-  
-  .page .ellipse-9 {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    top: 0;
-    left: 80px;
-    background-color: #ffdd8d;
-    border-radius: 5px/5.04px;
   }
   
   .page .contact {
@@ -2221,7 +2174,7 @@ a {
     position: relative;
     width: 158px;
     height: 76px;
-    background-image: url(https://c.animaapp.com/0N2IY9nQ/img/rectangle-181-1@2x.png);
+    background-image: url('assets/img/logo.png');
     background-size: cover;
     background-position: 50% 50%;
   }
@@ -3399,4 +3352,108 @@ a {
     letter-spacing: 0;
     line-height: normal;
   }
+
+
+
   
+.recommendation-carousel {
+  width: 80%;
+  max-width: 1000px;
+}
+
+.swiper-container {
+  width: 100%;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 340px;
+  height: 327px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  margin-right: 20px; /
+}
+
+.rating {
+  color: #ffcc00;
+  font-size: 18px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+h3 {
+  width: 133.3px;
+  height: 44.6px;
+  font-size: 18px;
+  margin: 40px 0 10px 0;
+}
+
+/*
+p {
+  width: 293.48px;
+  height: 90.21px;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 20px;
+}*/
+
+.swiper-slide .card {
+  margin-right: 15px; /* Adds space between the slides */
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.user img {
+  width: 89.6px;
+  height: 81px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.details {
+  text-align: left;
+}
+
+.details strong {
+  font-size: 14px;
+  display: block;
+}
+
+.details span {
+  color: gray;
+  font-size: 12px;
+}
+
+/* Swiper pagination (yellow dots) */
+
+/* Inactive pagination dots (light color) */
+.swiper-pagination-bullet {
+  background-color: #e7d37b !important; /* Light yellow for inactive dots */
+  opacity: 0.6 !important;
+  width: 10px;
+  height: 10px;
+  top: 0;
+  left: 0;
+  border-radius: 5px/5.04px;
+}
+
+/* Active pagination dot (bright yellow) */
+.swiper-pagination-bullet-active {
+  background-color: #ecba3c !important; /* Bright yellow for active dot */
+  opacity: 1 !important;
+  width: 10px;
+  height: 10px;
+  top: 0;
+  left: 0;
+  border-radius: 5px/5.04px;
+}
