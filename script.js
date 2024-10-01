@@ -17,15 +17,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-
-
-
-
-
-
-
-
-
 // leave me your info 
 document.getElementById('infoForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form from submitting

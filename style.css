@@ -67,7 +67,7 @@ a {
     width: 1440px;
     height: 3977px;
     background-color: var(--background);
-    overflow: hidden;
+    overflow: visible; 
 }
   
 .page .overlap {
@@ -92,6 +92,8 @@ a {
     background-color: #ffffff;
     box-shadow: 4px 0px 10px #2f7af91a;
 }
+
+
 
   
 .page .logo {
@@ -2211,7 +2213,7 @@ a {
     gap: 60px;
     position: relative;
     background-color: var(--background);
-    overflow: hidden;
+    position: sticky; /* Make the navbar sticky */
   }
   
   .main .navbar {
