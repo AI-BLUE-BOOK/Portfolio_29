@@ -1222,6 +1222,41 @@ a {
     white-space: nowrap;
     font-style: var(--h2-32px-font-style);
   }
+
+
+  
+  .page .group-4 {
+    padding-top: 40px; /* Use padding to create space at the top */
+  }
+.page .form-input-1 {
+  background-color: #f0f0f6;
+  width: 773.38px;
+  height: 50px;
+  padding: 10px; /* Add padding */
+  border: none; /* Remove default border */
+  outline: none; /* Remove outline on focus */
+  position: relative; /* Allow for z-index adjustments */
+  z-index: 10; /* Ensure it's on top */
+  
+}
+
+.page .group-5 {
+ 
+}
+
+.page .form-input-2 {
+  background-color: #f0f0f6;
+  width: 773.38px;
+  height: 50px;
+  padding: 10px; /* Add padding */
+  border: none; /* Remove default border */
+  outline: none; /* Remove outline on focus */
+  position: relative; /* Allow for z-index adjustments */
+  z-index: 10; /* Ensure it's on top */
+}
+
+
+
   
   .page .info-detail {
     display: inline-flex;
@@ -1236,7 +1271,7 @@ a {
   
   .page .group-4 {
     position: relative;
-    width: 775.38px;
+    width: 773.38px;
     height: 80.06px;
     margin-right: -2px;
   }
@@ -1247,8 +1282,8 @@ a {
     height: 50px;
     top: 30px;
     left: 0;
-    background-color: var(--background);
     border-radius: 5px;
+    
   }
   
   .page .text-wrapper-15 {
@@ -1264,12 +1299,14 @@ a {
     line-height: var(--h4-18px-line-height);
     white-space: nowrap;
     font-style: var(--h4-18px-font-style);
+    
+  
   }
   
   .page .text-wrapper-16 {
     position: absolute;
     width: 282px;
-    top: 0;
+    top: 20px;
     left: 0;
     font-family: var(--h4-18px-font-family);
     font-weight: var(--h4-18px-font-weight);
@@ -1286,6 +1323,7 @@ a {
     width: 775.38px;
     height: 82.06px;
     margin-right: -2px;
+    padding-top: 40px; /* Use padding to create space at the top */
   }
   
   .page .rectangle-6 {
@@ -1294,14 +1332,14 @@ a {
     height: 50px;
     top: 32px;
     left: 0;
-    background-color: var(--background);
+    /* background-color: var(--background); */
     border-radius: 5px;
   }
   
   .page .text-wrapper-17 {
     position: absolute;
     width: 98px;
-    top: 0;
+    top: 20px;
     left: 0;
     font-family: var(--h4-18px-font-family);
     font-weight: var(--h4-18px-font-weight);
@@ -1312,12 +1350,26 @@ a {
     white-space: nowrap;
     font-style: var(--h4-18px-font-style);
   }
+
+  .page .form-input-4 {
+    background-color: #f0f0f6;
+    width: 773.38px; /* Adjust as needed */
+    height: 150px; /* Set a specific height */
+    padding: 10px; /* Add padding for better appearance */
+    border: none; /* Remove default border */
+    outline: none; /* Remove outline on focus */
+    resize: vertical; /* Allow vertical resizing if needed */
+    position: relative; /* Allow for z-index adjustments */
+    z-index: 10; /* Ensure it's on top */
+    margin-top: 20px; /* Add margin to create space above */
+}
   
   .page .group-6 {
     position: relative;
     width: 775.38px;
     height: 240.48px;
     margin-right: -2px;
+    padding-top: 40px; /* Use padding to create space at the top */
   }
   
   .page .rectangle-7 {
@@ -1326,14 +1378,14 @@ a {
     height: 210px;
     top: 30px;
     left: 0;
-    background-color: var(--background);
+    /*background-color: var(--background); */
     border-radius: 5px;
   }
   
   .page .text-wrapper-18 {
     position: absolute;
     width: 181px;
-    top: 0;
+    top: 20px;
     left: 0;
     font-family: var(--h4-18px-font-family);
     font-weight: var(--h4-18px-font-weight);
@@ -1357,7 +1409,24 @@ a {
     background-color: #ffb400;
     border-radius: 5px;
   }
-  
+
+
+  .page .send-message-2 {
+    display: flex;
+    width: 151px;
+    height: 50.83px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 17px 16px;
+    position: relative;
+    background-color: #ffb400;
+    font-family: "Inter", Helvetica;
+    border-radius: 5px;
+    border : none;
+    cursor: pointer;
+  }
+  /*
   .page .send-message-2 {
     position: relative;
     width: fit-content;
@@ -1368,7 +1437,7 @@ a {
     font-size: 14px;
     letter-spacing: 0;
     line-height: normal;
-  }
+  } */
   
   .page .contact-information {
     position: absolute;
@@ -3532,7 +3601,7 @@ p {
 }
 
 .add-domain {
-   /* Start hidden */
+  display : none;
   width: 833px;
   /*height: 1024px;*/
   align-items: center;
