@@ -211,9 +211,11 @@
           </div>
         </div>
       <button  class="add-skill" id="addSkillBtn" >ADD SKILL</button>
-      </div>
+      
 
               <!-- Modal structure -->
+               <!---overlap div-->
+              
               <div id="addSkillModal" class="add-domain">
                 <div class="info-details">
                   <button class="close-btn" id="closeModalBtn">&times;</button>
@@ -332,33 +334,27 @@
     </div>
     <script >
          // Get elements
-   const addSkillBtn = document.getElementById('addSkillBtn');
-   const addSkillModal = document.getElementById('addSkillModal');
-   const closeModalBtn = document.getElementById('closeModalBtn');
-   const cancelBtn = document.getElementById('cancelBtn');
+         const addSkillBtn = document.getElementById('addSkillBtn');
+const addSkillModal = document.getElementById('addSkillModal');
+const closeModalBtn = document.getElementById('closeModalBtn');
+const cancelBtn = document.getElementById('cancelBtn');
 
-   // Function to open modal
-   function openPopup() {
-     console.log("Button clicked!"); 
-     addSkillModal.style.display = 'flex'; // Show modal
-   }
+// Function to open modal
+function openPopup() {
+    console.log("Button clicked!"); // Add this line to check if click is being detected
+    addSkillModal.style.display = 'flex'; // Show modal
+}
 
-   // Function to close modal
-   function closePopup() {
-     addSkillModal.style.display = 'none'; // Hide modal
-   }
+// Function to close modal
+function closePopup() {
+    addSkillModal.style.display = 'none'; // Hide modal
+}
 
-   // Add event listeners
-   addSkillBtn.addEventListener('click', openPopup);
-   closeModalBtn.addEventListener('click', closePopup);
-   cancelBtn.addEventListener('click', closePopup);
+// Add event listeners
+addSkillBtn.addEventListener('click', openPopup);
+closeModalBtn.addEventListener('click', closePopup);
+cancelBtn.addEventListener('click', closePopup);
 
-   // Close the modal when clicking outside the modal content
-   window.addEventListener('click', function(event) {
-     if (event.target === addSkillModal) {
-       closePopup();
-     }
-   });
 
     </script>
   </body>

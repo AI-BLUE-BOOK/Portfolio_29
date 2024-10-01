@@ -2747,7 +2747,7 @@ a {
     background-color: var(--white);
   }
   
- /* .main .add-skill {
+ .main .add-skill {
     display: flex;
     width: 151px;
     align-items: center;
@@ -2761,7 +2761,7 @@ a {
     box-shadow: none; 
     border: none; 
     cursor: pointer; 
-  } */
+  }
 /*  .main .add-skill:focus {
     outline: none; /* Remove default focus outline 
     box-shadow: none; /* Ensure no shadow on focus 
@@ -3517,16 +3517,30 @@ p {
 }
 /*---------------------------------------------final modal--------------*/
 
+.modal {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center align horizontally and vertically */
+  background-color: white; /* Solid background for modal */
+  padding: 20px;
+  width: 400px; /* Adjust as needed */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  z-index: 10; /* Make sure it's above the overlay */
+  border-radius: 8px;
+}
+
 .add-domain {
-  display: none; /* Start hidden */
-  width: 1440px;
-  height: 1024px;
+   /* Start hidden */
+  width: 833px;
+  /*height: 1024px;*/
   align-items: center;
   justify-content: center;
   gap: 10px;
   position: relative;
-  background-color: #00000080;
-}
+  /*background-color: #00000080;*/
+}*/
 
 .add-domain .info-details {
   display: flex;
@@ -3539,6 +3553,7 @@ p {
   background-color: var(--white);
   border-radius: 10px;
 }
+
 
 .add-domain .add-skill {
   position: relative;
@@ -3651,6 +3666,40 @@ p {
   letter-spacing: 0;
   line-height: 26.4px;
   white-space: nowrap;
+}
+.add-domain .add-skill-1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Close button styling */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.add-skill-wrapper,
+.cancel {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel {
+  background-color: white;
+  border: 1px solid #ff5151;
+  color: #ff5151;
+}
+
+.add-skill-wrapper {
+  background-color: #ffb400;
+  color: white;
 }
 
 .add-domain .frame-2 {
