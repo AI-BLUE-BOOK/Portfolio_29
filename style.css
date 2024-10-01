@@ -1426,18 +1426,6 @@ a {
     border : none;
     cursor: pointer;
   }
-  /*
-  .page .send-message-2 {
-    position: relative;
-    width: fit-content;
-    margin-top: -1.08px;
-    font-family: "Inter", Helvetica;
-    font-weight: 600;
-    color: #000000;
-    font-size: 14px;
-    letter-spacing: 0;
-    line-height: normal;
-  } */
   
   .page .contact-information {
     position: absolute;
