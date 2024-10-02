@@ -214,58 +214,67 @@
        </div>
                   <!-- Modal structure -->
                    <!---overlap div-->
-              <div id="addSkillModal" class="add-domain">
-                <div class="info-details">
-                  <button class="close-btn" id="closeModalBtn">&times;</button>
-                  <div class="add-skill-1">Add Skill</div>
+                   <div class="overlay-domain" id="modalOverlay"></div>
+                   <div id="addSkillModal" class="add-domain">
+                    <div class="info-details">
+                      <button class="close-btn" id="closeModalBtn">&times;</button>
+                      <div class="add-skill-1">Add Skill</div>
                   
-                  <!-- Domain Section -->
-                  <div class="domain-section">
-                    <div class="frame">
-                      <div class="text-wrapper">Domain</div>
-                    </div>
-                    <div class="domain-input">
-                      <div class="overlap-group">
-                        <div class="front-end-developer">Front End Developer</div>
-                      </div>
-                    </div>
-                  </div>
-      
-                  <!-- Skills Section -->
-                  <div class="skills-section">
-                    <!--<div class="div-wrapper">
-                      <div class="div">Skills</div>
-                    </div>-->
-                    <div class="frame-2">
-                      <div class="skill-proficiency">
-                        <div class="frame-3"><div class="text-wrapper-2">Skill</div></div>
-                        <div class="proficiency-wrapper">
-                          <p class="proficiency">
-                            <span class="span">Proficiency</span> <span class="text-wrapper-3"> (%)</span>
-                          </p>
+                      <!-- Domain Section -->
+                      <div class="domain-section">
+                        <div class="frame-domain">
+                          <div class="text-wrapper-domain">Domain</div>
+                        </div>
+                        <div class="domain-input">
+                          <div class="overlap-group-domain9">
+                            <input type="text" id="domain" placeholder="Front End Developer" class="front-end-developer" required />
+                          </div>
                         </div>
                       </div>
-                      <div class="inputs">
-                        <div class="input-group">
-                          <div class="rectangle"></div>
-                          <div class="rectangle-2"></div>
-                        </div>
-                        <div class="input-group">
-                          <div class="rectangle"></div>
-                          <div class="rectangle-2"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-      
-                  <!-- Footer with buttons -->
-                  <div class="footer-modal">
-                    <div class="add-skill-wrapper">Add Skill</div>
-                    <div class="cancel" id="cancelBtn">Cancel</div>
-                  </div>
-                </div>
-              </div>      
+                  
+                      <!-- Skills Section -->
+                      <div class="skills-section">
+                        <div class="frame-2">
+                          <div class="skill-proficiency">
+                            <div class="frame-3">
+                              <div class="text-wrapper-2">Skills</div>
+                            </div>
+                            <div class="proficiency-wrapper">
+                              <p class="proficiency">
+                                <span class="span">Proficiency</span> <span class="text-wrapper-proficiency"> (%)</span>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="inputs">
+                            <div class="input-group">
+                              <input type="text" id="skill1" class="rectangle"  required />
+                              <input type="number" id="proficiency1" class="rectangle-2"  min="0" max="100" required />
+                            </div>
+                           <div class="input-group">
+                              <input type="text" id="skill2" class="rectangle"  required />
+                              <input type="number" id="proficiency2" class="rectangle-2"  min="0" max="100" required />
+                            </div>
+                           <div class="input-group">
+                              <input type="text" id="skill3" class="rectangle"  required />
+                              <input type="number" id="proficiency3" class="rectangle-2"  min="0" max="100" required />
+                            </div>
+                           <div class="input-group">
+                              <input type="text" id="skill4" class="rectangle"  required />
+                              <input type="number" id="proficiency4" class="rectangle-2" min="0" max="100" required />
+                            </div>
 
+                           
+                          </div>
+                        </div>
+                      </div>
+                  
+                      <!-- Footer with buttons -->
+                      <div class="footer-modal">
+                        <div class="add-skill-wrapper" id="submitBtn">Add Skill</div>
+                        <div class="cancel" id="cancelBtn">Cancel</div>
+                      </div>
+                    </div>
+                  </div>
 
       <footer class="footer">
         <div class="logo-3">
@@ -352,6 +361,49 @@ function closePopup() {
 addSkillBtn.addEventListener('click', openPopup);
 closeModalBtn.addEventListener('click', closePopup);
 cancelBtn.addEventListener('click', closePopup);
+
+
+// Add skill button here //
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('submitBtn').addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent default action
+  
+      const domain = document.getElementById('domain').value;
+      const skills = [];
+  
+      for (let i = 1; i <= 4; i++) {
+        const skill = document.getElementById(`skill${i}`).value;
+        const proficiency = document.getElementById(`proficiency${i}`).value;
+  
+        if (skill && proficiency) {
+          skills.push({ skill, proficiency });
+        }
+      }
+  
+      // Log the values for testing
+      console.log('Domain:', domain);
+      console.log('Skills:', skills);
+  
+      // Optionally show a success popup or message
+      alert('Skills added successfully in the console!');
+      
+      // Close the modal (if desired)
+      document.getElementById('addSkillModal').style.display = 'none';
+    });
+  
+    document.getElementById('closeModalBtn').addEventListener('click', function() {
+      document.getElementById('addSkillModal').style.display = 'none';
+    });
+  
+    document.getElementById('cancelBtn').addEventListener('click', function() {
+      document.getElementById('addSkillModal').style.display = 'none';
+    });
+  });
+
+
+  // modal
+
+
 
 
     </script>

@@ -19,7 +19,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // leave me your info 
-document.getElementById('infoForm').addEventListener('submit', function(event) {
+document.getElementById('infoForm').addEventListener('submit', function(event)
+{
     event.preventDefault(); // Prevent form from submitting
 
     // Get form input values
@@ -55,3 +56,4 @@ document.getElementById('infoForm').addEventListener('submit', function(event) {
         alert('Form submission canceled.');
     }
 });
+
