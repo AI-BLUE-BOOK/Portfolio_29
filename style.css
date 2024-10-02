@@ -727,7 +727,8 @@
     position: relative;
     width: 100%; /* Use 100% for responsiveness */
     height: 327.1px; /* Height of the carousel */
-    margin: 20px 0 0; /* Add top margin to create space below the navbar */
+    margin: 20px 0 0;
+    z-index: 1; 
 }
 
 /* Overlap adjustment */
@@ -735,6 +736,16 @@
     position: relative;
     width: 100%; /* Use 100% for responsiveness */
     height: 327px; /* Adjust as needed */
+    z-index: 1; 
+}
+
+.recommendations .overlap-2 {
+    position: relative;
+    width: 100%; /* Use 100% for responsiveness */
+    height: 327px; /* Adjust as needed */
+    z-index: 1;
+    display: flex; /* Enable flexbox layout */
+    overflow: hidden; /* Hide overflow for the carousel effect */
 }
 
 .page .recommendations-wrapper {
@@ -748,6 +759,7 @@
     z-index: 1; /* Ensure it's below the navbar */
     top: 0;
     left: 0;
+    z-index: 1;
 }
   
   .page .recommendations-3 {
@@ -3192,10 +3204,12 @@
   .recommendation-carousel {
      width: 80%;
      max-width: 1000px;
+     z-index: 1;
   }
   
   .swiper-container {
     width: 80%;
+    z-index: 1;
   }
   
   .card {
@@ -3851,3 +3865,106 @@
   border-radius: 5px;
 }
 
+/*-----------------------------------------for different viewpport------------------*/
+/* For large screens (desktops and laptops) */
+@media only screen and (min-width: 1200px) {
+  /* Add styles for large screens here */
+}
+
+/* For medium screens (tablets) */
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  /* Add styles for medium screens here */
+  .page .overlap {
+    height: 100vh; /* Adjust the height of the overlap section */
+  }
+  .page .navbar {
+    padding: 20px 40px; /* Adjust the padding of the navbar */
+  }
+  .page .hero {
+    top: 120px; /* Adjust the top margin of the hero section */
+  }
+  .page .projects {
+    top: 700px; /* Adjust the top margin of the projects section */
+  }
+  .page .recommendations {
+    top: 1700px; /* Adjust the top margin of the recommendations section */
+  }
+  .page .contact {
+    top: 2400px; /* Adjust the top margin of the contact section */
+  }
+}
+
+/* For small screens (mobile devices) */
+@media only screen and (max-width: 767px) {
+  /* Add styles for small screens here */
+  .page .overlap {
+    height: 100vh; /* Adjust the height of the overlap section */
+  }
+  .page .navbar {
+    padding: 10px 20px; /* Adjust the padding of the navbar */
+    flex-direction: column; /* Make the navbar items stack vertically */
+  }
+  .page .logo {
+    width: 100px; /* Adjust the width of the logo */
+  }
+  .page .menu {
+    flex-direction: column; /* Make the menu items stack vertically */
+  }
+  .page .hero {
+    top: 100px; /* Adjust the top margin of the hero section */
+  }
+  .page .projects {
+    top: 600px; /* Adjust the top margin of the projects section */
+    flex-direction: column; /* Make the projects stack vertically */
+  }
+  .page .recommendations {
+    top: 1500px; /* Adjust the top margin of the recommendations section */
+    flex-direction: column; /* Make the recommendations stack vertically */
+  }
+  .page .contact {
+    top: 2200px; /* Adjust the top margin of the contact section */
+  }
+  .page .leave-me-your-info {
+    width: 100%; /* Make the leave me your info section full width */
+  }
+  .page .contact-information {
+    width: 100%; /* Make the contact information section full width */
+  }
+}
+
+/* For extra small screens (small mobile devices) */
+@media only screen and (max-width: 479px) {
+  /* Add styles for extra small screens here */
+  .page .overlap {
+    height: 100vh; /* Adjust the height of the overlap section */
+  }
+  .page .navbar {
+    padding: 5px 10px; /* Adjust the padding of the navbar */
+  }
+  .page .logo {
+    width: 80px; /* Adjust the width of the logo */
+  }
+  .page .menu {
+    flex-direction: column; /* Make the menu items stack vertically */
+  }
+  .page .hero {
+    top: 80px; /* Adjust the top margin of the hero section */
+  }
+  .page .projects {
+    top: 500px; /* Adjust the top margin of the projects section */
+    flex-direction: column; /* Make the projects stack vertically */
+  }
+  .page .recommendations {
+    top: 1400px; /* Adjust the top margin of the recommendations section */
+    flex-direction: column; /* Make the recommendations stack vertically */
+  }
+  .page .contact {
+    top: 2100px; /* Adjust the top margin of the contact section */
+  }
+  .page .leave-me-your-info {
+    width: 100%; /* Make the leave me your info section full width */
+  }
+  .page .contact-information {
+    width: 100%; /* Make the contact information section full width */
+  }
+}

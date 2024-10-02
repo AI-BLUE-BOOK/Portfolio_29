@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     var swiper = new Swiper('.swiper-container', {
         slidesPerView: 3,
+        spaceBetween: 20, // Adjust this value for the desired gap between cards
         loop: true,
         pagination: {
             el: '.swiper-pagination',
@@ -56,4 +57,6 @@ document.getElementById('infoForm').addEventListener('submit', function(event)
         alert('Form submission canceled.');
     }
 });
+
+////carousel
 
