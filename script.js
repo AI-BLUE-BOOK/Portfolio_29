@@ -1,11 +1,12 @@
-var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 3,
-    
-    loop: true,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
+document.addEventListener('DOMContentLoaded', function () {
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

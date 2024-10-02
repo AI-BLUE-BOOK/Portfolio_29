@@ -1,3 +1,6 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Inter:var(--h6-16px-font-weight),var(--paragraph-progress-15-font-weight),var(--p-15px-paragraph-font-weight),var(--h4-18px-font-weight),700,600,var(--h2-32px-font-weight),500,400");
+
 :root {
     --background: rgba(240, 240, 246, 1);
     --paragraph-font: rgba(118, 118, 118, 1);
@@ -34,51 +37,52 @@
     --h4-18px-letter-spacing: 0px;
     --h4-18px-line-height: 123.59999418258667%;
     --h4-18px-font-style: normal;
-}
+  }
   
-
-
-
-@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-@import url("https://fonts.googleapis.com/css?family=Inter:var(--h6-16px-font-weight),var(--paragraph-progress-15-font-weight),var(--p-15px-paragraph-font-weight),var(--h4-18px-font-weight),700,600,var(--h2-32px-font-weight),500,400");
-* {
+  
+  
+  
+  
+  * {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-}
-html,
-body {
+  }
+  html,
+  body {
   margin: 0px;
   height: 100%;
-}
-/* a blue color as a generic focus style */
-button:focus-visible {
+  }
+  /* a blue color as a generic focus style */
+  button:focus-visible {
   outline: 2px solid #4a90e2 !important;
   outline: -webkit-focus-ring-color auto 5px !important;
-}
-a {
+  }
+  a {
   text-decoration: none;
-}
-
-/*---------Home page -----------------------------------------------------*/
-
-
-.page {
+  }
+  
+  /*-------------------------------------------------Home page -----------------------------------------------------*/
+  
+  
+  .page {
     position: relative;
     width: 1440px;
     height: 3977px;
     background-color: var(--background);
     overflow: visible; 
-}
+  }
   
-.page .overlap {
+  .page .overlap {
     position: absolute;
     width: 1440px;
-    height: 782px;
+    /* height: 782px; */
+    height: 100vh; /* 100% of the viewport height */
     top: 0;
     left: 0;
-}
+    z-index:1;
+  }
   
-.page .navbar {
+  .page .navbar {
     display: flex;
     width: 1440px;
     height: 152px;
@@ -86,35 +90,34 @@ a {
     justify-content: space-between;
     padding: 38px 96px;
     z-index: 1000; /* Ensure it stays above other content */
-    position: sticky; /* Make the navbar sticky */
+    position: fixed; /* It makes the navbar sticky */
     top: 0;
     left: 0;
     background-color: #ffffff;
     box-shadow: 4px 0px 10px #2f7af91a;
-}
-
-
-
+  }
   
-.page .logo {
+  
+  .page .logo {
     position: relative;
     width: 158px;
     height: 76px;
     background-image: url(https://c.animaapp.com/bKBXDrmE/img/rectangle-98-1@2x.png);
     background-size: cover;
     background-position: 50% 50%;
-}
+  }
   
-.page .menu {
+  .page .menu {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 40px;
     position: relative;
     flex: 0 0 auto;
-}
+    z-index: 2; /* Ensure this is above header sections */
+  }
   
-.page .home {
+  .page .home {
     display: inline-flex;
     align-items: flex-start;
     gap: 10px;
@@ -125,9 +128,9 @@ a {
     background-color: #ffb400;
     border-radius: 5px;
     transform: rotate(90deg);
-}
+  }
   
-.page .div-wrapper {
+  .page .div-wrapper {
     display: inline-flex;
     height: 37px;
     align-items: center;
@@ -140,9 +143,9 @@ a {
     border-radius: 10px;
     transform: rotate(-90deg);
     pointer-events: auto; 
-}
+  }
   
-.page .text-wrapper {
+  .page .text-wrapper {
     position: relative;
     width: fit-content;
     margin-top: -1px;
@@ -152,15 +155,15 @@ a {
     font-size: 14px;
     letter-spacing: 0;
     line-height: normal;
-}
+  }
   
-.page .skills {
+  .page .skills {
     position: relative;
     width: 35px;
     height: 37px;
-}
+  }
   
-.page .div {
+  .page .div {
     display: inline-flex;
     height: 37px;
     align-items: center;
@@ -168,21 +171,21 @@ a {
     padding: 10px 0px;
     position: relative;
     border-radius: 10px;
-}
+  }
   
-.page .services {
+  .page .services {
     position: relative;
     width: 67px;
     height: 17px;
-}
+  }
   
-.page .services-2 {
+  .page .services-2 {
     width: 69px;
     position: relative;
     height: 17px;
-}
+  }
   
-.page .text-wrapper-2 {
+  .page .text-wrapper-2 {
     position: absolute;
     top: 0;
     left: 0;
@@ -192,19 +195,19 @@ a {
     font-size: 14px;
     letter-spacing: 0;
     line-height: normal;
-}
+  }
   
-.page .services-wrapper {
+  .page .services-wrapper {
     width: 55px;
     position: relative;
     height: 17px;
-}
+  }
   
-.page .services-3 {
+  .page .services-3 {
     width: 57px;
     position: relative;
     height: 17px;
-}
+  }
   
   .page .services-4 {
     width: 125px;
@@ -456,6 +459,8 @@ a {
     position: absolute;
     top: 842px;
     left: 98px;
+    
+    
   }
   
   .page .description {
@@ -720,28 +725,30 @@ a {
   
   .page .carousel {
     position: relative;
-    width: 1440px;
-    height: 327.1px;
-    margin-left: -1px;
-    margin-right: -1px;
-  }
-  
-  .page .overlap-2 {
+    width: 100%; /* Use 100% for responsiveness */
+    height: 327.1px; /* Height of the carousel */
+    margin: 20px 0 0; /* Add top margin to create space below the navbar */
+}
+
+/* Overlap adjustment */
+.page .overlap-2 {
     position: relative;
-    width: 1440px;
-    height: 327px;
-  }
-  
-  .page .recommendations-wrapper {
+    width: 100%; /* Use 100% for responsiveness */
+    height: 327px; /* Adjust as needed */
+}
+
+.page .recommendations-wrapper {
     display: flex;
-    width: 1440px;
+    width: 100%; /* Use 100% for responsiveness */
     align-items: center;
     justify-content: center;
     gap: 10px;
-    position: absolute;
+    position: relative; /* Keep this relative */
+    margin-top: 20px; /* Optional: additional spacing */
+    z-index: 1; /* Ensure it's below the navbar */
     top: 0;
     left: 0;
-  }
+}
   
   .page .recommendations-3 {
     display: inline-flex;
@@ -838,14 +845,7 @@ a {
     left: -2305px;
   }
   
- /* .page .profile {
-    position: absolute;
-    width: 88px;
-    height: 81px;
-    top: -654px;
-    left: -2305px;
-    object-fit: cover;
-  }*/
+  
   
   .page .overlap-wrapper {
     position: relative;
@@ -1224,13 +1224,13 @@ a {
     white-space: nowrap;
     font-style: var(--h2-32px-font-style);
   }
-
-
+  
+  
   
   .page .group-4 {
     padding-top: 40px; /* Use padding to create space at the top */
   }
-.page .form-input-1 {
+  .page .form-input-1 {
   background-color: #f0f0f6;
   width: 773.38px;
   height: 50px;
@@ -1238,15 +1238,15 @@ a {
   border: none; /* Remove default border */
   outline: none; /* Remove outline on focus */
   position: relative; /* Allow for z-index adjustments */
-  z-index: 10; /* Ensure it's on top */
-  
-}
-
-.page .group-5 {
  
-}
-
-.page .form-input-2 {
+  
+  }
+  
+  .page .group-5 {
+  
+  }
+  
+  .page .form-input-2 {
   background-color: #f0f0f6;
   width: 773.38px;
   height: 50px;
@@ -1254,11 +1254,10 @@ a {
   border: none; /* Remove default border */
   outline: none; /* Remove outline on focus */
   position: relative; /* Allow for z-index adjustments */
-  z-index: 10; /* Ensure it's on top */
-}
-
-
-
+  }
+  
+  
+  
   
   .page .info-detail {
     display: inline-flex;
@@ -1352,7 +1351,7 @@ a {
     white-space: nowrap;
     font-style: var(--h4-18px-font-style);
   }
-
+  
   .page .form-input-4 {
     background-color: #f0f0f6;
     width: 773.38px; /* Adjust as needed */
@@ -1362,9 +1361,8 @@ a {
     outline: none; /* Remove outline on focus */
     resize: vertical; /* Allow vertical resizing if needed */
     position: relative; /* Allow for z-index adjustments */
-    z-index: 10; /* Ensure it's on top */
     margin-top: 20px; /* Add margin to create space above */
-}
+  }
   
   .page .group-6 {
     position: relative;
@@ -1411,8 +1409,8 @@ a {
     background-color: #ffb400;
     border-radius: 5px;
   }
-
-
+  
+  
   .page .send-message-2 {
     display: flex;
     width: 151px;
@@ -2202,8 +2200,8 @@ a {
     font-style: var(--paragraph-progress-15-font-style);
   }
   /*-----------------------skill page------------------------------------*/
-
-
+  
+  
   .main {
     display: flex;
     flex-direction: column;
@@ -2213,18 +2211,20 @@ a {
     gap: 60px;
     position: relative;
     background-color: var(--background);
-    position: sticky; /* Make the navbar sticky */
+  
   }
   
   .main .navbar {
     display: flex;
+    width: 1440px;
     height: 152px;
     align-items: center;
     justify-content: space-between;
     padding: 38px 96px;
-    position: relative;
-    align-self: stretch;
-    width: 100%;
+    position: fixed; /* It makes the navbar sticky */
+    z-index: 1000; /* to ensure the navbar is on top of other elements */
+    top: 0;
+    left: 0;
     background-color: #ffffff;
     box-shadow: 4px 0px 10px #2f7af91a;
   }
@@ -2806,7 +2806,7 @@ a {
     background-color: var(--white);
   }
   
- .main .add-skill {
+  .main .add-skill {
     display: flex;
     width: 151px;
     align-items: center;
@@ -2821,7 +2821,7 @@ a {
     border: none; 
     cursor: pointer; 
   }
-/*  .main .add-skill:focus {
+  /*  .main .add-skill:focus {
     outline: none; /* Remove default focus outline 
     box-shadow: none; /* Ensure no shadow on focus 
   }*/
@@ -2876,7 +2876,7 @@ a {
     background-size: cover;
     background-position: 50% 50%;
   }
-
+  
   .main .logo-3 {
     position: relative;
     width: 970px;
@@ -2926,9 +2926,9 @@ a {
     background-size: cover;
     background-position: 50% 50%;
   }
- 
-
-
+  
+  
+  
   .main .frame-2 {
     display: flex;
     align-items: flex-start;
@@ -3164,7 +3164,7 @@ a {
     font-style: var(--paragraph-progress-15-font-style);
   }
   /**------------------------------add skills modal first time-----------*/
-
+  
   .info-details {
     display: flex;
     flex-direction: column;
@@ -3469,20 +3469,20 @@ a {
     letter-spacing: 0;
     line-height: normal;
   }
-
-
-
   
-.recommendation-carousel {
+  
+  
+  
+  .recommendation-carousel {
   width: 80%;
   max-width: 1000px;
-}
-
-.swiper-container {
-  width: 100%;
-}
-
-.card {
+  }
+  
+  .swiper-container {
+  width: 80%;
+  }
+  
+  .card {
   background-color: white;
   border-radius: 10px;
   padding: 20px;
@@ -3491,70 +3491,70 @@ a {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   position: relative;
-  margin-right: 20px; /
-}
-
-.rating {
+  margin-right: 20px;
+  }
+  
+  .rating {
   color: #ffcc00;
   font-size: 18px;
   position: absolute;
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
-}
-
-h3 {
+  }
+  
+  h3 {
   width: 133.3px;
   height: 44.6px;
   font-size: 18px;
   margin: 40px 0 10px 0;
-}
-
-/*
-p {
+  }
+  
+  /*
+  p {
   width: 293.48px;
   height: 90.21px;
   font-size: 14px;
   color: #333;
   margin-bottom: 20px;
-}*/
-
-.swiper-slide .card {
+  }*/
+  
+  .swiper-slide .card {
   margin-right: 15px; /* Adds space between the slides */
-}
-
-.user {
+  }
+  
+  .user {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
-}
-
-.user img {
+  }
+  
+  .user img {
   width: 89.6px;
   height: 81px;
   border-radius: 50%;
   margin-right: 15px;
-}
-
-.details {
+  }
+  
+  .details {
   text-align: left;
-}
-
-.details strong {
+  }
+  
+  .details strong {
   font-size: 14px;
   display: block;
-}
-
-.details span {
+  }
+  
+  .details span {
   color: gray;
   font-size: 12px;
-}
-
-/* Swiper pagination (yellow dots) */
-
-/* Inactive pagination dots (light color) */
-.swiper-pagination-bullet {
+  }
+  
+  /* Swiper pagination (yellow dots) */
+  
+  /* Inactive pagination dots (light color) */
+  .swiper-pagination-bullet {
   background-color: #e7d37b !important; /* Light yellow for inactive dots */
   opacity: 0.6 !important;
   width: 10px;
@@ -3562,10 +3562,10 @@ p {
   top: 0;
   left: 0;
   border-radius: 5px/5.04px;
-}
-
-/* Active pagination dot (bright yellow) */
-.swiper-pagination-bullet-active {
+  }
+  
+  /* Active pagination dot (bright yellow) */
+  .swiper-pagination-bullet-active {
   background-color: #ecba3c !important; /* Bright yellow for active dot */
   opacity: 1 !important;
   width: 10px;
@@ -3573,10 +3573,10 @@ p {
   top: 0;
   left: 0;
   border-radius: 5px/5.04px;
-}
-/*---------------------------------------------final modal--------------*/
-
-.modal {
+  }
+  /*---------------------------------------------final modal--------------*/
+  
+  .modal {
   display: none; /* Initially hidden */
   position: fixed;
   top: 50%;
@@ -3588,9 +3588,9 @@ p {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   z-index: 10; /* Make sure it's above the overlay */
   border-radius: 8px;
-}
-
-.add-domain {
+  }
+  
+  .add-domain {
   display : none;
   width: 833px;
   /*height: 1024px;*/
@@ -3599,9 +3599,9 @@ p {
   gap: 10px;
   position: relative;
   /*background-color: #00000080;*/
-}*/
-
-.add-domain .info-details {
+  }
+  
+  .add-domain .info-details {
   display: flex;
   flex-direction: column;
   width: 833px;
@@ -3611,10 +3611,10 @@ p {
   position: relative;
   background-color: var(--white);
   border-radius: 10px;
-}
-
-
-.add-domain .add-skill {
+  }
+  
+  
+  .add-domain .add-skill {
   position: relative;
   width: fit-content;
   margin-top: -1px;
@@ -3626,9 +3626,9 @@ p {
   letter-spacing: 0;
   line-height: 54.4px;
   white-space: nowrap;
-}
-
-.add-domain .domain-section {
+  }
+  
+  .add-domain .domain-section {
   display: flex;
   flex-direction: column;
   height: 120.15px;
@@ -3637,16 +3637,16 @@ p {
   position: relative;
   align-self: stretch;
   width: 100%;
-}
-
-.add-domain .frame {
+  }
+  
+  .add-domain .frame {
   position: relative;
   align-self: stretch;
   width: 100%;
   height: 32.15px;
-}
-
-.add-domain .text-wrapper {
+  }
+  
+  .add-domain .text-wrapper {
   position: absolute;
   width: 793px;
   top: -1px;
@@ -3658,25 +3658,25 @@ p {
   letter-spacing: 0;
   line-height: 27.5px;
   white-space: nowrap;
-}
-
-.add-domain .domain-input {
+  }
+  
+  .add-domain .domain-input {
   height: 74px;
   margin-right: -2px;
   position: relative;
   align-self: stretch;
   width: 100%;
-}
-
-.add-domain .overlap-group {
+  }
+  
+  .add-domain .overlap-group {
   position: relative;
   width: 777px;
   height: 74px;
   background-color: #f0f0f6;
   border-radius: 5px;
-}
-
-.add-domain .front-end-developer {
+  }
+  
+  .add-domain .front-end-developer {
   position: absolute;
   width: 345px;
   top: 26px;
@@ -3689,9 +3689,9 @@ p {
   line-height: var(--h4-18px-line-height);
   white-space: nowrap;
   font-style: var(--h4-18px-font-style);
-}
-
-.add-domain .skills-section {
+  }
+  
+  .add-domain .skills-section {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -3700,9 +3700,9 @@ p {
   align-self: stretch;
   width: 100%;
   flex: 0 0 auto;
-}
-
-.add-domain .div-wrapper {
+  }
+  
+  .add-domain .div-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3711,9 +3711,9 @@ p {
   align-self: stretch;
   width: 100%;
   flex: 0 0 auto;
-}
-
-.add-domain .div {
+  }
+  
+  .add-domain .div {
   position: relative;
   flex: 1;
   height: 27.5px;
@@ -3725,15 +3725,15 @@ p {
   letter-spacing: 0;
   line-height: 26.4px;
   white-space: nowrap;
-}
-.add-domain .add-skill-1 {
+  }
+  .add-domain .add-skill-1 {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 20px;
-}
-
-/* Close button styling */
-.close-btn {
+  }
+  
+  /* Close button styling */
+  .close-btn {
   position: absolute;
   top: 10px;
   right: 15px;
@@ -3741,27 +3741,27 @@ p {
   border: none;
   font-size: 24px;
   cursor: pointer;
-}
-
-.add-skill-wrapper,
-.cancel {
+  }
+  
+  .add-skill-wrapper,
+  .cancel {
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-}
-
-.cancel {
+  }
+  
+  .cancel {
   background-color: white;
   border: 1px solid #ff5151;
   color: #ff5151;
-}
-
-.add-skill-wrapper {
+  }
+  
+  .add-skill-wrapper {
   background-color: #ffb400;
   color: white;
-}
-
-.add-domain .frame-2 {
+  }
+  
+  .add-domain .frame-2 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -3770,9 +3770,9 @@ p {
   align-self: stretch;
   width: 100%;
   flex: 0 0 auto;
-}
-
-.add-domain .skill-proficiency {
+  }
+  
+  .add-domain .skill-proficiency {
   display: flex;
   height: 22px;
   align-items: center;
@@ -3780,18 +3780,18 @@ p {
   position: relative;
   align-self: stretch;
   width: 100%;
-}
-
-.add-domain .frame-3 {
+  }
+  
+  .add-domain .frame-3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
   position: relative;
   flex: 0 0 auto;
-}
-
-.add-domain .text-wrapper-2 {
+  }
+  
+  .add-domain .text-wrapper-2 {
   position: relative;
   width: fit-content;
   margin-top: -1px;
@@ -3803,18 +3803,18 @@ p {
   line-height: var(--h4-18px-line-height);
   white-space: nowrap;
   font-style: var(--h4-18px-font-style);
-}
-
-.add-domain .proficiency-wrapper {
+  }
+  
+  .add-domain .proficiency-wrapper {
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
   position: relative;
   flex: 0 0 auto;
-}
-
-.add-domain .proficiency {
+  }
+  
+  .add-domain .proficiency {
   position: relative;
   width: fit-content;
   margin-top: -1px;
@@ -3825,23 +3825,23 @@ p {
   letter-spacing: 0;
   line-height: 22.2px;
   white-space: nowrap;
-}
-
-.add-domain .span {
+  }
+  
+  .add-domain .span {
   font-weight: var(--h4-18px-font-weight);
   font-family: var(--h4-18px-font-family);
   font-style: var(--h4-18px-font-style);
   letter-spacing: var(--h4-18px-letter-spacing);
   line-height: var(--h4-18px-line-height);
   font-size: var(--h4-18px-font-size);
-}
-
-.add-domain .text-wrapper-3 {
+  }
+  
+  .add-domain .text-wrapper-3 {
   font-weight: 500;
   font-style: italic;
-}
-
-.add-domain .inputs {
+  }
+  
+  .add-domain .inputs {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -3850,9 +3850,9 @@ p {
   align-self: stretch;
   width: 100%;
   flex: 0 0 auto;
-}
-
-.add-domain .input-group {
+  }
+  
+  .add-domain .input-group {
   display: flex;
   height: 74px;
   align-items: center;
@@ -3860,26 +3860,26 @@ p {
   position: relative;
   align-self: stretch;
   width: 100%;
-}
-
-.add-domain .rectangle {
+  }
+  
+  .add-domain .rectangle {
   flex: 1;
   flex-grow: 1;
   position: relative;
   height: 74px;
   background-color: #f0f0f6;
   border-radius: 5px;
-}
-
-.add-domain .rectangle-2 {
+  }
+  
+  .add-domain .rectangle-2 {
   width: 150.34px;
   position: relative;
   height: 74px;
   background-color: #f0f0f6;
   border-radius: 5px;
-}
-
-.add-domain .footer {
+  }
+  
+  .add-domain .footer {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -3889,9 +3889,9 @@ p {
   width: 100%;
   flex: 0 0 auto;
   background-color: transparent;
-}
-
-.add-domain .add-skill-wrapper {
+  }
+  
+  .add-domain .add-skill-wrapper {
   display: flex;
   width: 151px;
   align-items: center;
@@ -3901,9 +3901,9 @@ p {
   position: relative;
   background-color: #ffb400;
   border-radius: 5px;
-}
-
-.add-domain .add-skill-2 {
+  }
+  
+  .add-domain .add-skill-2 {
   position: relative;
   width: fit-content;
   margin-top: -1px;
@@ -3913,9 +3913,9 @@ p {
   font-size: 14px;
   letter-spacing: 0;
   line-height: normal;
-}
-
-.add-domain .cancel {
+  }
+  
+  .add-domain .cancel {
   display: flex;
   width: 151px;
   align-items: center;
@@ -3927,9 +3927,9 @@ p {
   border-radius: 5px;
   border: 1px solid;
   border-color: #ff5151;
-}
-
-.add-domain .cancel-2 {
+  }
+  
+  .add-domain .cancel-2 {
   position: relative;
   width: fit-content;
   margin-top: -1px;
@@ -3939,19 +3939,19 @@ p {
   font-size: 14px;
   letter-spacing: 0;
   line-height: normal;
-}
-
-
-/*--------------------------------------------------------------------*/
-
-.footer-modal {
+  }
+  
+  
+  /*--------------------------------------------------------------------*/
+  
+  .footer-modal {
   display: flex;
   justify-content: flex-end;
   gap: 20px;
   margin-top: 20px;
-}
-
-.close-btn {
+  }
+  
+  .close-btn {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -3959,4 +3959,4 @@ p {
   border: none;
   font-size: 18px;
   cursor: pointer;
-}
+  }
